@@ -38,8 +38,7 @@ function [Volume,I_final] = Praqa(I,ThresholdFactor,CleanProc,GPU)
 
 %RANGE (0,1) NORMALIZATION
 
-MAX = max(I,[],'all');
-I_norm = I./MAX;
+I_norm = normalize(I,'range');
 
 %LOAD STRUCTURING ELEMENTS
 
